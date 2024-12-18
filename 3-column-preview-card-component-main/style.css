@@ -1,0 +1,178 @@
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Base styles for the body element */
+body {
+    background-color: white; /* Sets background color to white */
+    font-family: 'Lexend Deca', sans-serif; /* Applies the Lexend Deca font */
+    font-weight: 400; /* Sets font weight */
+    display: flex; /* Enables flexbox for layout */
+    flex-direction: column; /* Arranges items in a column */
+    min-height: 100vh; /* Ensures the body spans the full viewport height */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+    font-size: 15px; /* Sets base font size */
+}
+
+/* Container for the cards */
+.container {
+    display: flex; /* Displays cards in a row */
+    width: 60%; /* Sets container width to 60% of the viewport */
+    margin: 5em auto; /* Adds vertical spacing and centers horizontally */
+    min-height: 570px; /* Sets minimum height for consistency */
+}
+
+/* Styles for the sedan card */
+.sedan {
+    background-color: hsl(31, 77%, 52%); /* Orange color for sedan */
+    border-radius: 10px 0px 0px 10px; /* Rounds the top-left and bottom-left corners */
+}
+
+/* Styles for the SUV card */
+.suv {
+    background-color: hsl(184, 100%, 22%); /* Dark blue color for SUV */
+}
+
+/* Styles for the luxury card */
+.luxury {
+    background-color: hsl(179, 100%, 13%); /* Very dark green color for luxury */
+    border-radius: 0px 10px 10px 0px; /* Rounds the top-right and bottom-right corners */
+}
+
+/* Icon styles for all cards */
+.icon {
+    padding: 2rem 2.5rem; /* Adds padding around the icon */
+    margin-bottom: 1.5rem; /* Adds spacing below the icon */
+    margin-top: 2rem; /* Adds spacing above the icon */
+}
+
+/* Description text styles for all cards */
+.description {
+    padding: 1rem 3rem; /* Adds padding on all sides */
+    padding-bottom: 3rem; /* Increases padding at the bottom */
+    margin-bottom: 2rem; /* Adds spacing below the description */
+    color: hsla(0, 0%, 100%, 0.75); /* Sets a semi-transparent white color */
+    line-height: 2rem; /* Improves readability with increased line height */
+    font-size: 1.3rem; /* Sets slightly larger font size */
+}
+
+/* Heading styles for all cards */
+.heading {
+    padding: 0rem 3rem; /* Adds horizontal padding */
+    font-family: 'Big Shoulders Display', sans-serif; /* Uses a bold display font */
+    font-weight: 700; /* Sets bold font weight */
+    text-transform: uppercase; /* Converts text to uppercase */
+    color: hsl(0, 0%, 95%); /* Very light grey color */
+    margin-bottom: 1.5rem; /* Adds spacing below the heading */
+    font-size: 2.5rem; /* Sets font size */
+}
+
+/* Common styles for all Learn More buttons */
+.learn-more-sed, .learn-more-lux, .learn-more-suv {
+    border: 1px solid transparent; /* Makes the border invisible initially */
+    background-color: white; /* White background for the buttons */
+    border-radius: 15rem; /* Creates fully rounded edges */
+    color: inherit; /* Inherits the text color */
+    display: inline-block; /* Makes the button inline-block */
+    padding: 15px 35px; /* Adds padding inside the button */
+    text-decoration: none; /* Removes underline from the links */
+    margin: 0rem 3rem 3rem 3rem; /* Adds spacing around the buttons */
+    font-size: 1.1rem; /* Sets font size */
+    position: relative; /* Enables positioning adjustments if needed */
+}
+
+/* Specific styles for the sedan button */
+.learn-more-sed {
+    color: hsl(31, 77%, 52%); /* Orange text color */
+    transition: background-color, color ease-in 500ms; /* Smooth color transition */
+}
+
+/* Specific styles for the SUV button */
+.learn-more-suv {
+    color: hsl(184, 100%, 22%); /* Dark blue text color */
+    transition: background-color, color ease-in 500ms; /* Smooth color transition */
+}
+
+/* Specific styles for the luxury button */
+.learn-more-lux {
+    color: hsl(179, 100%, 13%); /* Very dark green text color */
+    transition: background-color, color ease-in 500ms; /* Smooth color transition */
+}
+
+/* Hover effect for the sedan button */
+.learn-more-sed:hover {
+    background-color: hsl(31, 77%, 52%); /* Changes background to orange */
+    color: white; /* Changes text color to white */
+    border: 2px solid white; /* Adds a white border */
+}
+
+/* Hover effect for the SUV button */
+.learn-more-suv:hover {
+    background-color: hsl(184, 100%, 22%); /* Changes background to dark blue */
+    color: white; /* Changes text color to white */
+    border: 2px solid white; /* Adds a white border */
+}
+
+/* Hover effect for the luxury button */
+.learn-more-lux:hover {
+    background-color: hsl(179, 100%, 13%); /* Changes background to dark green */
+    color: white; /* Changes text color to white */
+    border: 2px solid white; /* Adds a white border */
+}
+
+/* Attribution section styles */
+.attribution {
+    font-size: 14px; /* Small font size */
+    text-align: center; /* Centers the text */
+}
+
+/* Link styles in the attribution section */
+.attribution a {
+    color: hsl(228, 45%, 44%); /* Blue color for links */
+    text-decoration: none; /* Removes underline from the links */
+}
+
+/* Hover effect for attribution links */
+.attribution a:hover {
+    text-decoration: underline; /* Underlines the link on hover */
+}
+
+/* Responsive styles for screens smaller than 900px */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column; /* Stacks the cards vertically */
+        margin: 6em auto; /* Adjusts margin for smaller screens */
+    }
+
+    .sedan {
+        border-radius: 10px 10px 0px 0px; /* Rounds the top corners */
+    }
+
+    .suv {
+        border-radius: 0px 0px 0px 0px; /* No rounded corners */
+    }
+
+    .luxury {
+        border-radius: 0px 0px 10px 10px; /* Rounds the bottom corners */
+    }
+
+    .icon {
+        padding-top: 1rem; /* Reduces padding above the icon */
+        padding-bottom: 1rem; /* Reduces padding below the icon */
+    }
+
+    .heading {
+        padding-top: 0rem; /* Removes padding above the heading */
+        padding-bottom: 0rem; /* Removes padding below the heading */
+        margin-bottom: 1rem; /* Adjusts spacing below the heading */
+    }
+
+    .description {
+        margin-bottom: 0rem; /* Removes margin below the description */
+        padding-bottom: 1.5rem; /* Adjusts padding below the description */
+    }
+}
+
